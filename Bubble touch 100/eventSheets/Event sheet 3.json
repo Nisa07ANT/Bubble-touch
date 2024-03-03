@@ -1,0 +1,109 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "highscore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 921311460809337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 107392666457779,
+					"parameters": {
+						"object": "play1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 177486937495757,
+					"parameters": {
+						"layout": "\"layout 2\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 704200751429254,
+					"parameters": {
+						"audio-file": "clickbutton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 698223779936911
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 817088945191215,
+					"parameters": {
+						"object": "exit"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 693792494216627,
+					"parameters": {
+						"layout": "\"layout 1\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 802043899746091,
+					"parameters": {
+						"audio-file": "clickbutton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 966248701040575
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 867254409852858
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "highscore",
+					"sid": 910867226578509,
+					"parameters": {
+						"text": "\"highscore:\" &highscore"
+					}
+				}
+			],
+			"sid": 464228416068912
+		}
+	],
+	"sid": 369413349669275
+}
